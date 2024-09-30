@@ -17,7 +17,7 @@
         </div>
 
 
-        <div style="border: 2px solid #383838; position: absolute; top:270px; height: 20px; background-color: #383838; width: 700px;" ></div>
+        <div style="border: 2px solid #383838; position: absolute; top:270px; height: 20px; background-color: #383838; width: 850px;" ></div>
         
         <div style="position: absolute; top:320px; left: 100px; display: flex; flex-direction: column; gap: 10px;">
             <button style="height: 50px; width: 100px; border-radius: 100px; background-color: rgb(141, 255, 47); font-weight: 800;" onclick="startCar()">Start Car</button>
@@ -39,6 +39,8 @@
     <script>
         var intervalId;
         var counter=0;
+        var rotateCounter=0;
+
         function startCar(){
             var car=document.getElementById('car')
             var carImage = document.querySelector('img');
@@ -75,8 +77,13 @@
             var yAxis=document.getElementById('yAxis')
             yAxis.value=counter;
 
+            car.style.rotate=rotateCounter+"deg";
+            rotateCounter+=1;
+
             if(car.style.marginTop == 350+"px"){
                 window.clearInterval(intervalId);
+                rotateCounter=0
+                car.style.rotate=rotateCounter+"deg";
                 var dropMessage=document.getElementById('dropMessage')
                 dropMessage.innerText="Car Dropped!!!🔥"
                 carImage.src="https://i.gifer.com/YQDj.gif"
