@@ -41,53 +41,48 @@
             <div class="container-fluid">
     
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: flex; align-items: center; justify-content: center;">
                         <a class="navbar-brand" href="#">
-                            <img src="img (2).png" alt="Logo" width="200" height="70" class="d-inline-block align-text-top">
+                            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" alt="Logo" height="40" class="d-inline-block align-text-top">
                         </a>
+                        <form class="d-flex" style="height: 30px;" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-primary" style="display: flex; align-items: center; justify-content: center;" type="submit">Search</button>
+                        </form>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                     &nbsp;&nbsp;&nbsp;
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary me-md-2" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                        <button style="display: flex; align-items: center; justify-content: center; gap:10px" class="btn btn-primary me-md-2" type="button"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                             </svg>Sign in</button>
-                        <button class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        <button style="display: flex; align-items: center; justify-content: center; gap:10px" class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                 height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
                                 <path
                                     d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
                             </svg>Wishlist</button>
-                        <button class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        <button style="display: flex; align-items: center; justify-content: center; gap:10px" class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                 height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                 <path
                                     d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                             </svg>My Cart</button>
                     </div>
-    
-    
-    
                 </div>
             </div>
         </nav>
         <div class="jumbotron text-justify" style="background-color: rgb(0, 109, 211);min-height: 15vh;">
-            <h1 style="color: white;">Mens wear</h1>
-    
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item" style="background-color: rgb(0, 109, 211)">Home ></li>
-                <li class="list-group-item" style="background-color: rgb(0, 109, 211)">Library ></li>
-                <li class="list-group-item" style="background-color: rgb(0, 109, 211)">Data</li>
+            <h1 style=" color: white; padding-left: 30px;">Mens wear</h1>
+            <ul class="list-group list-group-horizontal" style="padding-left: 30px;">
+                <li class="list-group-item" style="background-color: rgb(0, 109, 211); border: none; color: #ddd;">Home ></li>
+                <li class="list-group-item" style="background-color: rgb(0, 109, 211); border: none; color: #ddd;">Library ></li>
+                <li class="list-group-item" style="background-color: rgb(0, 109, 211); border: none; color: #ddd; font-weight: 800; text-decoration: underline;">Data</li>
             </ul>
     
         </div>
 
-        <!-- Main container -->
-        <div class="container mt-4">
-          <div class="row">
-            <!-- Sidebar - Filters -->
+        <div class="container mt-4" >
+          <div class="row" >
+            <!-- Sidebar  -->
             <div class="col-md-3">
               <div class="filter-section">
                 <h5>Related Items</h5>
@@ -96,11 +91,9 @@
                   <li>Home items</li>
                   <li>Clothing</li>
                   <li>Shoes for men</li>
-                  <li>Interior items</li>
                   <li>Underwear</li>
                   <li>Shoes</li>
-                  <li>Accesories</li>
-                  <li>Books,Magazines</li>
+                  
                 </ul>
               </div>
 
@@ -185,16 +178,16 @@
               <div class="filter-section">
                 <h5>Size</h5>
                 <form>
-                  <button style="border: 0.2px; background-color: gray">
+                  <button style="border: 0.2px; ">
                     XS
                   </button>
-                  <button style="border: 0.2px; background-color: gray">
+                  <button style="border: 0.2px; ">
                     SM
                   </button>
-                  <button style="border: 0.2px; background-color: gray">
+                  <button style="border: 0.2px; ">
                     LG
                   </button>
-                  <button style="border: 0.2px; background-color: gray">
+                  <button style="border: 0.2px; ">
                     XXL
                   </button>
                 </form>
@@ -245,146 +238,196 @@
 
               <div class="row">
                 <!-- Product Card 1 -->
-                <div class="col-md-12 product-card">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img
-                        src="bag1.png"
-                        alt="Rucksack Backpack"
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <h6>Rucksack Backpack Jeans</h6>
-                      <p>
-                        Short description of the product goes here. Features
-                        include high durability and quality.
-                      </p>
-                      <div>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i> 3.7 (103 votes)
-                      </div>
-                    </div>
-                    <div class="col-md-3 text-end">
-                      <h6>
-                        $34.50 <span class="text-muted"><del>$49.99</del></span>
-                      </h6>
-                      <p><span class="text-success">Paid Shipping</span></p>
-                      <button class="btn btn-primary">Buy This</button>
-                      <button style="border: 0.1px">
-                        <img src="heart-fill.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 product-card">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img
-                        src="row4.png"
-                        alt="Mens Denim Jeans Short"
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <h6>Mens Denim Jeans Short</h6>
-                      <p>
-                        Short description of the product goes here. Features
-                        include high durability and quality.
-                      </p>
-                      <div>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i> 3.7 (103 votes)
-                      </div>
-                    </div>
-                    <div class="col-md-3 text-end">
-                      <h6>
-                        $34.50 <span class="text-muted"><del>$49.99</del></span>
-                      </h6>
-                      <p><span class="text-success">Free Shipping</span></p>
-                      <button class="btn btn-primary">Buy This</button>
-                      <button style="border: 0.1px">
-                        <img src="heart-fill.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 product-card">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img
-                        src="row2.png"
-                        alt="Winter Jacket for men and women"
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <h6>Winter Jacket for men and women</h6>
-                      <p>
-                        Short description of the product goes here. Features
-                        include high durability and quality.
-                      </p>
-                      <div>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i> 3.7 (103 votes)
-                      </div>
-                    </div>
-                    <div class="col-md-3 text-end">
-                      <h6>
-                        $140 <span class="text-muted"><del>$190</del></span>
-                      </h6>
-                      <p><span class="text-success">Free Shipping</span></p>
-                      <button class="btn btn-primary">Buy This</button>
-                      <button style="border: 0.1px">
-                        <img src="heart-fill.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 product-card">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img
-                        src="row3.png"
-                        alt="Winter Jacket for men and women"
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="col-md-7">
-                      <h6>Winter Jacket for men and women</h6>
-                      <p>
-                        Short description of the product goes here. Features
-                        include high durability and quality.
-                      </p>
-                      <div>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i> 3.7 (103 votes)
-                      </div>
-                    </div>
-                    <div class="col-md-3 text-end">
-                      <h6>
-                        $99.50 <span class="text-muted"><del>$190</del></span>
-                      </h6>
-                      <p><span class="text-success">Free Shipping</span></p>
-                      <button class="btn btn-primary">Buy This</button>
-                      <button style="border: 0.1px">
-                        <img src="heart-fill.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                <!-- Product Card 1 -->
+<div class="col-md-12 product-card">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="https://m.media-amazon.com/images/I/91lF0y9lafL.jpg" alt="Rucksack Backpack" class="img-fluid" />
+    </div>
+    <div class="col-md-7">
+      <h6>Rucksack Backpack Jeans</h6>
+      <p>
+        A durable and stylish rucksack backpack made from premium denim material. Perfect for travel, hiking, and daily use.
+      </p>
+      <ul>
+        <li>Material: High-quality denim</li>
+        <li>Capacity: 20 liters</li>
+        <li>Water-resistant</li>
+        <li>Available in multiple colors</li>
+      </ul>
+      <div>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i> 4.7 (250 reviews)
+      </div>
+    </div>
+    <div class="col-md-3 text-end">
+      <h6>$34.50 <span class="text-muted"><del>$49.99</del></span></h6>
+      <p><span class="text-success">Free Shipping</span></p>
+      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+        height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+        <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+    </svg>Wishlist</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 2 -->
+<div class="col-md-12 product-card">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="https://assets.ajio.com/medias/sys_master/root/20231028/OuLG/653cae50ddf77915195ff1da/-473Wx593H-464089666-brown-MODEL.jpg" alt="Leather Laptop Bag" class="img-fluid" />
+    </div>
+    <div class="col-md-7">
+      <h6>Leather Laptop Bag</h6>
+      <p>
+        Elegant and professional leather laptop bag, ideal for office use or meetings. Fits laptops up to 15.6 inches.
+      </p>
+      <ul>
+        <li>Material: Genuine leather</li>
+        <li>Fits laptops up to 15.6 inches</li>
+        <li>Multiple compartments for organization</li>
+        <li>Available in black and brown</li>
+      </ul>
+      <div>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        <i class="bi bi-star"></i> 4.5 (180 reviews)
+      </div>
+    </div>
+    <div class="col-md-3 text-end">
+      <h6>$99.00 <span class="text-muted"><del>$120.00</del></span></h6>
+      <p><span class="text-success">Free Shipping</span></p>
+      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+        height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+        <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+    </svg>Wishlist</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 3 -->
+<div class="col-md-12 product-card">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="https://m.media-amazon.com/images/I/31llEIJK6hL._AC_UY1000_.jpg" alt="Casual Daypack" class="img-fluid" />
+    </div>
+    <div class="col-md-7">
+      <h6>Casual Daypack</h6>
+      <p>
+        Lightweight and compact daypack perfect for school, commuting, or a day out. Available in a variety of fun colors.
+      </p>
+      <ul>
+        <li>Material: Nylon</li>
+        <li>Capacity: 10 liters</li>
+        <li>Lightweight and foldable</li>
+        <li>Available in vibrant colors</li>
+      </ul>
+      <div>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+        <i class="bi bi-star"></i> 4.2 (320 reviews)
+      </div>
+    </div>
+    <div class="col-md-3 text-end">
+      <h6>$15.75 <span class="text-muted"><del>$25.00</del></span></h6>
+      <p><span class="text-success">Free Shipping</span></p>
+      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+        height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+        <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+    </svg>Wishlist</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 4 -->
+<div class="col-md-12 product-card">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="https://5.imimg.com/data5/NQ/XY/DW/SELLER-35293580/canvas-duffle-bag.jpg" alt="Canvas Travel Bag" class="img-fluid" />
+    </div>
+    <div class="col-md-7">
+      <h6>Canvas Travel Bag</h6>
+      <p>
+        Spacious and durable canvas travel bag, designed for short trips or weekend getaways. Made to last with premium stitching.
+      </p>
+      <ul>
+        <li>Material: Heavy-duty canvas</li>
+        <li>Capacity: 30 liters</li>
+        <li>Multiple pockets for organization</li>
+        <li>Reinforced straps for extra durability</li>
+      </ul>
+      <div>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i> 4.8 (145 reviews)
+      </div>
+    </div>
+    <div class="col-md-3 text-end">
+      <h6>$59.99 <span class="text-muted"><del>$79.99</del></span></h6>
+      <p><span class="text-success">Free Shipping</span></p>
+      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+        height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+        <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+    </svg>Wishlist</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 5 -->
+<div class="col-md-12 product-card">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="https://livingwords.in/cdn/shop/products/living-words-chosen-blessed-tote-bag-28006118490199.jpg?v=1627360401" alt="Stylish Tote Bag" class="img-fluid" />
+    </div>
+    <div class="col-md-7">
+      <h6>Stylish Tote Bag</h6>
+      <p>
+        Trendy tote bag with ample space for daily essentials. Perfect for work, shopping, or a day out with friends.
+      </p>
+      <ul>
+        <li>Material: PU Leather</li>
+        <li>Available in multiple designs</li>
+        <li>Eco-friendly and vegan</li>
+        <li>Comfortable shoulder straps</li>
+      </ul>
+      <div>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        <i class="bi bi-star"></i> 4.3 (400 reviews)
+      </div>
+    </div>
+    <div class="col-md-3 text-end">
+      <h6>$22.49 <span class="text-muted"><del>$29.99</del></span></h6>
+      <p><span class="text-success">Free Shipping</span></p>
+      <button class="btn btn-primary">Buy Now</button>
+      <button class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+        height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+        <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+    </svg>Wishlist</button>
+    </div>
+  </div>
+</div>
+
                 </div>
             </div>
           </div>
