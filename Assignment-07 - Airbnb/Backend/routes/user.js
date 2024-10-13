@@ -1,6 +1,12 @@
 const express = require('express');
 const pool = require('../db').pool;
-const util =require('../utils')
+
+
+
+//jwt
+const jwt= require('jsonwebtoken')
+const sKey=require('../config').secret
+
 
 
 //to create router (URL)
@@ -58,6 +64,11 @@ router.post('/registration', (req, res) => {
 
 
 
+
+
+
+
+
 //post for login user
 router.post('/login', (req, res) => {
     console.log("Request Body:", req.body);
@@ -89,19 +100,33 @@ router.post('/login', (req, res) => {
                 if (user.isDeleted) {
                     return res.status(401).json({ status: "error", message: "Account deleted" });
                 } else {
+
+                    const payload={id: result.email}
+
+
+                    const token=jwt.sign(payload,sKey)
+
+                    const data={
+                        token,
+                        email:  email
+                        
+                    }
+                    
                     res.status(200).json({
                         status: "success",
-                        data: result[0]
+                        data: data
                     });
                     console.log("User logged in successfully.");
                 }
             }
         }
-
-
         
     });
 });
+
+
+
+
 
 
 
@@ -133,18 +158,26 @@ router.put('/changepassword',(req, res)=>{
 })
 
 
+
+
+
+
+
+
+
 //put to edit user
-router.put('/edituser',(req, res)=>{
+router.put('/edituser/:userid',(req, res)=>{
     console.log("Change user details")
 
+    const userId=req.params.userid
     const {email,firstName, lastName, phoneNumber }= req.body
 
     if(!email || !firstName || !lastName || !phoneNumber){
         return res.status(400).json({status: "error", message: "Invalid credentials."})
     }
 
-    const query =`UPDATE user SET firstName= ? , lastName= ? , phoneNumber = ? WHERE email = ? `
-    pool.query(query,[firstName, lastName, phoneNumber,  email],(error, result)=>{
+    const query =`UPDATE user SET firstName= ? , lastName= ? , phoneNumber = ? WHERE id=? && email = ? `
+    pool.query(query,[firstName, lastName, phoneNumber,userId,  email],(error, result)=>{
 
         if(error){
             return res.status(500).json({ status: "error", message: error.message });
@@ -158,6 +191,11 @@ router.put('/edituser',(req, res)=>{
     })
 
 })
+
+
+
+
+
 
 
 //post to delete user
@@ -186,6 +224,31 @@ router.post('/deleteuser',(req, res)=>{
 
 })
 
+//post to activate user
+router.post('/avtivateuser',(req, res)=>{
+
+    const {email,password} = req.body
+
+    if(!email || !password){
+        return res.status(400).json({status: "error", message: "Invalid credentials."})
+    }
+
+    const query= `UPDATE user  SET isDeleted = 0 WHERE email= ? && password = ? `
+
+    pool.query(query, [email, password], (error, result)=>{
+        
+        if(error){
+            return res.status(500).json({status:"error", message:"invalid credentials"})
+        }
+
+        res.status(201).json({
+            status: "Success",
+            data: result
+        })
+        console.log("user activated")
+    })
+
+})
 
 
 
@@ -202,7 +265,8 @@ router.post('/deleteuser',(req, res)=>{
 
 
 
-router.get('/getusers', (req, res) => {
+
+router.get('/', (req, res) => {
     console.log("Fetching users...");
 
     const query = "SELECT * FROM user WHERE  isDeleted = 0";

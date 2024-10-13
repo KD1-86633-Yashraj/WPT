@@ -55,7 +55,7 @@ router.get('/', (req, res) => {
 
 
 
-const uploadDirectory = path.join(__dirname, '../data/iconImages');
+const uploadDirectory = path.join(__dirname, '../data/images');
 if (!fs.existsSync(uploadDirectory)) {
     fs.mkdirSync(uploadDirectory, { recursive: true });
 }
@@ -71,6 +71,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+//post to add category
 router.post('/', upload.single('image'), (req, res) => {
     const { title, details } = req.body;
     const image = req.file;

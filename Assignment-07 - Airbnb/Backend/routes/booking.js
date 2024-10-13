@@ -1,6 +1,10 @@
 const pool = require('../db').pool;
 const express = require('express');
 
+
+const verifyToken= require('../middleware/authMiddleware')
+
+
 const router=express.Router()
 // +------------------+-------------+------+-----+-------------------+-------------------+
 // | Field            | Type        | Null | Key | Default           | Extra             |
@@ -14,7 +18,16 @@ const router=express.Router()
 // | createdTimestamp | datetime    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
 // +------------------+-------------+------+-----+-------------------+-------------------+
 
-router.get('/',(req,res)=>{
+
+
+// - get my bookings----------------
+// - book a property-----------
+// - cancel a booking
+
+
+
+
+router.get('/', verifyToken,(req,res)=>{
 
     const query=`SELECT * from bookings`
     pool.query(query,(err,result)=>{
@@ -30,6 +43,32 @@ router.get('/',(req,res)=>{
     })
 })
 
+
+//get booking by id
+router.get('/getbookings/:userid',(req,res)=>{
+
+
+    const userId=req.params.userid
+    
+    const query=`SELECT * from bookings where userId= ?`
+    pool.query(query,[userId],(err,result)=>{
+        if (err) {
+            return res.status(500).json({ status: "error", message: error.message });
+        }
+
+        res.status(200).json({
+            status: "success",
+            data: result
+        });
+        console.log("bookings fetched successfully.");
+    })
+})
+
+
+
+
+
+//post to insert booking details
 router.post('/:userid',(req,res)=>{
 
     const {propertyId, fromDate, toDate, total} = req.body

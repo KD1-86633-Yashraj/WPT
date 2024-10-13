@@ -8,6 +8,11 @@ const userRoutes = require('./routes/user');
 const catagoryRouter = require('./routes/category')
 const imageRouter= require('./routes/imageServe')
 const bookingRouter= require('./routes/booking')
+const propertyRouter=require('./routes/property')
+
+const jwt= require('jsonwebtoken')
+const sKey=require('./config').secret
+const jwtVerify=require('./middleware/authMiddleware')
 const app = express();
 const server = http.createServer(app);
 app.use(bodyParser.json());
@@ -16,16 +21,20 @@ app.use(bodyParser.json());
 
 
 //     if(
+//         request.url==='/user/'  ||
+//         request.url==='/user/registration' ||
 //         request.url==='/user/login' ||
-//         request.url==='/user/register' ||
-//         request.url==='/user/getusers'
+//         request.url==='/user/deleteuser'  ||
+//         request.url==='/user/'  ||
+//         request.url==='/user/'  
+
 //     ){
 
 //         next()
         
 //     }
 //     else{
-//         console.log("Success")
+//         console.log("URL not valid")
 //     }
 // })
 
@@ -33,6 +42,7 @@ app.use('/user', userRoutes);
 app.use('/category', catagoryRouter)
 app.use('/images', imageRouter)
 app.use('/bookings', bookingRouter)
+app.use('/property',propertyRouter)
 
 
 
