@@ -1,5 +1,8 @@
 const sql=require('mysql2')
 
+
+
+//mySQL connection string for the database
 const pool=sql.createPool({
     host:'localhost',
     user:'KD1-Yashraj-86633',
